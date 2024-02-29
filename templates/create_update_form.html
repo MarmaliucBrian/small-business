@@ -1,0 +1,23 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    <div class="row gx-4 gx-lg-5">
+
+        <div class="card text-white bg-secondary my-4 py-2 text-center">
+        <div class="card-body"><p class="text-white m-0">Acestea sunt serviciile oferite de catre compania noastra! <br/>
+            Va rugam sa apelati la noi cu incredere</p></div>
+    </div>
+    <div class="row gx-4 gx-lg-5">
+    <form class="row gy-2 gx-3 align-items-center" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        
+        <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+        
+    </form>
+</div>
+</div>
+    
+{% endblock content %}
